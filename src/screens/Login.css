@@ -1,37 +1,19 @@
-/* src/screens/Login.css */
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.login-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f2f2f2;
-}
-
 .login-container {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  width: 100%;
   max-width: 400px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 60px auto;
+  padding: 20px;
   font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
 label {
   text-align: left;
+  margin: 10px 0 5px;
   font-weight: 500;
 }
 
@@ -44,11 +26,13 @@ input {
 
 .password-wrapper {
   position: relative;
-}
+   width: 100%;           /* ✅ Ensure wrapper takes full width */
+  display: flex;         /* ✅ Optional: helps input behave properly */
 
+}
 .password-wrapper input {
-  width: 100%;
-  padding-right: 35px;
+  width: 100%;           /* ✅ Make password input same width as email */
+  padding-right: 35px;   /* ✅ Leave space for eye icon */
   box-sizing: border-box;
 }
 
@@ -62,16 +46,17 @@ input {
 
 .forgot-password {
   text-align: right;
+  margin-top: 5px;
   font-size: 14px;
 }
 
 .forgot-password a {
-  color: #6b46ff;
   text-decoration: none;
+  color: #6b46ff;
 }
 
 button {
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 12px;
   background-color: #6b46ff;
   color: white;
